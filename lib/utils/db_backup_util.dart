@@ -3,7 +3,7 @@ import 'package:espresso_partes_cafe/utils/db_util.dart';
 import 'package:espresso_partes_cafe/utils/formater_util.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:share_extend/share_extend.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:file_picker/file_picker.dart';
 
@@ -23,10 +23,8 @@ class DbBackupUtil {
       // Copie o arquivo do banco de dados para o arquivo de backup
       await File(databasePath).copy(backupPath);
 
-      await ShareExtend.share(
-        backupPath,
-        "file",
-        sharePanelTitle: "Backup",
+      await Share.shareXFiles(
+        [XFile(backupPath)],
         subject: backupFileName,
       );
     } catch (e) {
@@ -48,7 +46,9 @@ class DbBackupUtil {
   }
 
   static Future<String> selectFileToRestoreBackup() async {
-    FilePickerResult? result = await FilePicker.platform.pickFiles();
+    FilePickerResult? result = await FilePicker.pickFiles(
+      type: FileType.any,
+    );
 
     if (result != null) {
       String backupFilePath = result.files.single.path!;

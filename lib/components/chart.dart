@@ -74,9 +74,9 @@ class ChartState extends State<Chart> {
           ),
         ),
         tooltipBehavior: _tooltip,
-        series: <ChartSeries<ChartData, String>>[
+        series: <CartesianSeries<ChartData, String>>[
           ColumnSeries<ChartData, String>(
-            spacing: 2.1,
+            spacing: 0.1,
             dataSource: data,
             xValueMapper: (ChartData data, _) => data.month,
             yValueMapper: (ChartData data, _) => data.total.floor(),

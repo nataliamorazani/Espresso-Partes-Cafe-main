@@ -11,7 +11,7 @@ class ThemeUtil {
           color: Colors.white,
         ),
       ),
-      tabBarTheme: const TabBarTheme(
+      tabBarTheme: const TabBarThemeData(
         labelStyle: TextStyle(fontSize: 16),
         unselectedLabelStyle: TextStyle(fontSize: 16),
       ),
