@@ -57,16 +57,22 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   change_app_package_name: ^1.1.0
-
+  flutter_launcher_icons: ^0.14.0
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/ic_launcher_azul.png"
 
 flutter_native_splash:
-  background_image: "assets/images/splash.png"
+  background_image: "assets/images/ic_launcher_azul.png"
+
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

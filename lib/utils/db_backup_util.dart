@@ -56,7 +56,7 @@ class DbBackupUtil {
       final List<String> parts = backupFilePath.split("/");
       final String fileName = parts[parts.length - 1];
       if (File(backupFilePath).existsSync() &&
-          RegExp(r'^backup-\d{2}_\d{2}_\d{4}-espresso_partes_cafe\.db$')
+          RegExp(r'^backup-\d{2}_\d{2}_\d{4}-ordem_de_servico\.db$')
               .hasMatch(fileName)) {
         return backupFilePath;
       } else {

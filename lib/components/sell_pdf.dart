@@ -752,7 +752,7 @@ class HeaderPdf {
         pw.Row(
           children: [
             pw.Text(
-              "Venda: ",
+              "Ordem de serviço: ",
               style: pw.TextStyle(
                 color: PdfColor.fromHex("#6e6d6d"),
                 fontSize: 11,

@@ -568,7 +568,7 @@ class FinisheSell extends StatelessWidget {
             keyboardType: TextInputType.multiline,
           ),
         CustomInput(
-          label: "Observções",
+          label: "Observações",
           controller: controllerObservation,
           keyboardType: TextInputType.multiline,
         ),

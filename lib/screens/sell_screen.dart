@@ -102,7 +102,7 @@ class _SellScreenState extends State<SellScreen> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(_isEdit ? "Venda: ${_sell?.id}" : "Vender"),
+          title: Text(_isEdit ? "Pedido: ${_sell?.id}" : "Vender"),
           actions: [
             if (_isEdit)
               IconButton(
