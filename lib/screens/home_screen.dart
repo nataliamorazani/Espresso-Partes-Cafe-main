@@ -48,15 +48,20 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     child: ListTile(
-                      leading: Text(chartDataList[index].toDateString),
+                      // --- COLOQUE O NOVO TRECHO AQUI ---
+                      leading: Text(
+                        chartDataList[index].toDateString,
+                        // Isso faz o texto do mês buscar o estilo no seu ThemeUtil
+                        style: Theme.of(context).textTheme.bodyLarge,
+                      ),
                       trailing: Text(
                         FormaterUtil.toReal(chartDataList[index].total),
-                        style: TextStyle(
-                            // fontWeight: FontWeight.
-                            color: index == 0
-                                ? Colors.black87
-                                : Theme.of(context).colorScheme.secondary,
-                            fontSize: index == 0 ? 21 : 17),
+                        // Aqui removemos o TextStyle fixo para usar o do Tema
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          // Mantemos apenas a lógica de destaque para o primeiro item (Maio 2026)
+                          fontSize: index == 0 ? 21 : 18,
+                          color: index == 0 ? Colors.black87 : Theme.of(context).colorScheme.secondary,
+                        ),
                       ),
                     ),
                   );

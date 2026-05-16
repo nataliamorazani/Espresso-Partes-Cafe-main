@@ -6,7 +6,7 @@ import 'package:espresso_partes_cafe/models/sell.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:pdf/pdf.dart';
-import 'package:share_extend/share_extend.dart';
+import 'package:share_plus/share_plus.dart';
 
 class PdfUtils {
   static Future<void> createAndSharePdf({
@@ -45,14 +45,12 @@ class PdfUtils {
       );
 
       final String dir = (await getApplicationDocumentsDirectory()).path;
-      final String path = '$dir/venda-${sell.id}.pdf';
+      final String path = '$dir/o.s-${sell.id}.pdf';
       final file = File(path);
       await file.writeAsBytes(await pdf.save());
 
-      await ShareExtend.share(
-        path,
-        "file",
-        sharePanelTitle: "Enviar PDF",
+      await Share.shareXFiles(
+        [XFile(path)],
         subject: "espresso partes café",
       );
     } on PathNotFoundException catch (_) {

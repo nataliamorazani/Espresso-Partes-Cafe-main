@@ -33,20 +33,20 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   provider: ^6.0.5
-  syncfusion_flutter_charts: ^22.1.37
-  intl: ^0.18.0
+  syncfusion_flutter_charts: 33.2.5
+  intl: ^0.20.2
   masked_text: ^1.1.2
   google_maps_flutter: ^2.3.1
   http: ^1.1.0
-  geolocator: ^9.0.2
+  geolocator: ^14.0.2
   pdf: ^3.10.4
   path_provider: ^2.0.15
-  share_extend: ^2.0.0
+  share_plus: ^10.0.0
   sqflite: ^2.2.8+4
   path: ^1.8.3
   url_launcher: ^6.1.12
-  clipboard: ^0.1.3
-  file_picker: ^5.3.2
+  clipboard: ^3.0.14
+  file_picker: ^11.0.2
   flutter_native_splash: ^2.2.19
   image_picker: ^1.0.2
   # The following adds the Cupertino Icons font to your application.
@@ -57,16 +57,22 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   change_app_package_name: ^1.1.0
-
+  flutter_launcher_icons: ^0.14.0
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  flutter_lints: ^6.0.0
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/ic_launcher_azul.png"
 
 flutter_native_splash:
-  background_image: "assets/images/splash.png"
+  background_image: "assets/images/ic_launcher_azul.png"
+
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

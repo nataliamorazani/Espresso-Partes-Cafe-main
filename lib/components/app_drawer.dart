@@ -36,7 +36,7 @@ class AppDrawer extends StatelessWidget {
             selected: AppRoutes.home == currentRoute,
           ),
           MenuItem(
-            title: "Vendas",
+            title: "Ordem de Serviço",
             icon: Icons.library_books,
             route: AppRoutes.sales,
             selected: AppRoutes.sales == currentRoute,

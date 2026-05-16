@@ -3,7 +3,7 @@ import 'package:sqflite/sqflite.dart' as sql;
 import 'package:path/path.dart' as path;
 
 class DbUtil {
-  static String dbName = 'espresso_partes_cafe.db';
+  static String dbName = 'ordem_de_servico.db';
 
   static Future<sql.Database> database() async {
     final dbPath = await sql.getDatabasesPath();
