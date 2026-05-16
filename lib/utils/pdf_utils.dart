@@ -45,7 +45,7 @@ class PdfUtils {
       );
 
       final String dir = (await getApplicationDocumentsDirectory()).path;
-      final String path = '$dir/venda-${sell.id}.pdf';
+      final String path = '$dir/o.s-${sell.id}.pdf';
       final file = File(path);
       await file.writeAsBytes(await pdf.save());
 

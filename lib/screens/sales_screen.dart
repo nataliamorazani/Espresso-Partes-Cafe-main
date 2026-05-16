@@ -90,7 +90,7 @@ class _SalesScreenState extends State<SalesScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const title = "Vendas";
+    const title = "Ordem de Serviço";
     return Scaffold(
       appBar: SearchAppBar(
         onSubmit: _getSales,
